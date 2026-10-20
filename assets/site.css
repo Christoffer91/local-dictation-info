@@ -1,0 +1,51 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172b3a;
+  background: #f6f8fa;
+  line-height: 1.65;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: #005ca9; text-underline-offset: .18em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: .16em; }
+a:focus-visible, main:focus-visible { outline: 3px solid #a83d00; outline-offset: 4px; }
+.site-header, .notice-banner, main, .site-footer {
+  width: min(100% - 2rem, 76ch);
+  margin-inline: auto;
+}
+.site-header { padding-block: 1.2rem; }
+.brand { font-size: 1.3rem; font-weight: 750; }
+nav { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; margin-top: .75rem; }
+nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.notice-banner {
+  padding: 1rem 1.2rem;
+  border: 2px solid #885d00;
+  border-radius: .4rem;
+  background: #fff3cf;
+  color: #352400;
+}
+.notice-banner p { margin: .35rem 0 0; }
+main { padding-block: 1.5rem 2.5rem; }
+h1, h2, h3 { line-height: 1.25; overflow-wrap: anywhere; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: 0 0 1.3rem; }
+h2 { font-size: 1.4rem; margin-top: 2rem; }
+h3 { font-size: 1.15rem; }
+p, li { overflow-wrap: anywhere; }
+li + li { margin-top: .65rem; }
+ul, ol { padding-left: 1.5rem; }
+code { font-family: ui-monospace, monospace; font-size: .95em; overflow-wrap: anywhere; }
+.cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
+.card, .review-note { padding: 1.2rem; border: 1px solid #aebdca; border-radius: .4rem; background: #fff; }
+.card h2, .review-note h2 { margin-top: 0; }
+.card a { display: inline-flex; align-items: center; min-height: 44px; }
+dl { margin: 0; }
+dt { font-weight: 700; margin-top: .8rem; }
+dd { margin: .15rem 0 0; overflow-wrap: anywhere; }
+.site-footer { border-top: 1px solid #aebdca; padding-block: 1rem 2rem; font-size: .95rem; }
+.skip-link { position: absolute; top: .5rem; left: 1rem; padding: .7rem; background: white; transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); z-index: 2; }
+@media (max-width: 32rem) {
+  .site-header, .notice-banner, main, .site-footer { width: calc(100% - 1.5rem); }
+  .notice-banner, .card, .review-note { padding: .9rem; }
+}
